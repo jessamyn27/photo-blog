@@ -14,14 +14,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // set up controllers =============================
 const usersController = require('./controllers/users.js');
-const photosController = require('./controllers/photos.js');
-
-// set up controller routes =======================
 app.use('/users', usersController);
+
+const photosController = require('./controllers/photos.js');
 app.use('/photos', photosController);
 
-// home route =====================================
-app.get('/', (req, res) => {
+// home route? =====================================
+app.get('/home', (req, res) => {
   res.render('index.ejs');
 });
 

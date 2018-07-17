@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1><%=user.name%>'s Page</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/users">Users Index</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+<main>
+  <section>
+    <h2>User Attributes</h2>
+    <ul>
+      <li>Name: <%=user.name%></li>
+      <section>
+        <a href="/users/<%=user.id%>/edit">Edit</a>
+      </section>
+    </ul>
+    <form  action="/users/<%=user.id%>?_method=DELETE" method="POST">
+<button type="submit">delete user</button>
+</form>
+  </section>
+</main>
+
+
+  </body>
+</html>

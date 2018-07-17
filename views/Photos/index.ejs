@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Photos</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/photos/new">Create a new Photo</a></li>
+      </ul>
+    </nav>
+  </header><!-- /header -->
+  <main>
+    <h2>List of Photos</h2>
+    <ul>
+      <% for (let i = 0; i < photos.length; i++){%>
+           <li><a href="/photos/<%=photos[i].id%>"><%=photos[i].name %></a></li>
+      <%}%>
+    </ul>
+
+  </main>

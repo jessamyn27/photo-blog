@@ -20,7 +20,7 @@ const photosController = require('./controllers/photos.js');
 app.use('/photos', photosController);
 
 // home route? =====================================
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index.ejs');
 });
 

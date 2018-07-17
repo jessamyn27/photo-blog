@@ -8,16 +8,19 @@
 <body>
 
   <header>
-  		<h1>Meet the Talented Photographers</h1>
-  		<button><a href="/">Home</a></button>
-  		<button><a href="/users/new">Add Your Info!</a></button>
+  		<h1>Photo Drop</h1>
+      <h2>A place for photographers and enthusiasts to share and collab</h2>
+  		<span><button><a href="/">New Post!</a></button>
+      <button><a href="/">All Contributers</a></button>
+      <button><a href="/">All Submissions</a></button></span>
+
   	</header>
 
   	<main>
   		<ul>
-  			<% for(let i = 0; i < users.length; i++) { %>
-  				<li><a href="/users/<%= users[i].id%>"><%= users[i].username %></a></li>
-  			<% } %>
+  			<% for(let i = 0; i < photos.length; i++){ %>
+  				<li><a href="/photos/<%= photos[i].id%>"><%= photos[i].id %></a></li>
+  			<%}%>
   		</ul>
   	</main>
 

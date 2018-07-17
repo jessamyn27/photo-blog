@@ -10,21 +10,20 @@
 
     <header>
 
-      <h1>Create a New User</h1>
+		<h1>Welcome to Photo Drop!</h1>
 
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/usrs">Users Index</a></li>
-        </ul>
-      </nav>
-    </header>
+		<button><a href="/">Home</a></button>
 
-    <main>
-      <form action="/users" method="POST">
-        <input type="text" name="name">
-        <button type="submit">Submit</button>
-      </main>
+  </header>
+	<br>
+
+	<section>
+		<form method="POST" action="/users">
+			Username: <input type="text" name="username">
+			Password: <input type="text" name="password">
+			<input type="submit" value="Create User">
+		</form>
+	</section>
 
   </body>
 </html>

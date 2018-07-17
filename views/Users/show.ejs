@@ -7,30 +7,32 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   </head>
   <body>
+
     <header>
-      <h1><%=user.name%>'s Page</h1>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/users">Users Index</a></li>
+      
+		<h1><%= user.username %></h1>
+		<nav>
 
-        </ul>
-      </nav>
-    </header>
+			<button><a href="/">Home</a></button>
+			<button><a href="/users">Back to User Index</a></button>
 
-<main>
-  <section>
-    <h2>User Attributes</h2>
-    <ul>
-      <li>Name: <%=user.name%></li>
-      <section>
-        <a href="/users/<%=user.id%>/edit">Edit</a>
-      </section>
-    </ul>
-    <form  action="/users/<%=user.id%>?_method=DELETE" method="POST">
-<button type="submit">delete user</button>
-</form>
-  </section>
-</main>
+		</nav>
+	</header>
+
+	<main>
+
+
+
+	</main>
+
+	<section>
+
+		<button><a href="/users/<%= user.id %>/edit">Edit My Info</a></button>
+		<form method="POST" action="/users/<%= user.id %>?_method=DELETE">
+			<input type="submit" value="Delete My Info">
+		</form>
+
+	</section>
+
   </body>
 </html>

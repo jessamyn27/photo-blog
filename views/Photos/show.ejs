@@ -6,33 +6,30 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   </head>
+
   <body>
+
     <header>
-      <h1><%=photo.name%>'s Page</h1>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/photos">Photos Index</a></li>
+		<h1><%= user.username %></h1>
+		<nav>
+			<button><a href="/">Home</a></button>
+			<button><a href="/users">Back to User Index</a></button>
+		</nav>
+	</header>
 
-        </ul>
-      </nav>
-    </header>
+	<main>
 
-<main>
-  <section>
-    <h2>Photo Attributes</h2>
-    <ul>
-      <li>Name: <%=photo.name%></li>
-      <section>
-        <a href="/photos/<%=photo.id%>/edit">Edit</a>
-      </section>
-    </ul>
-    <form  action="/photos/<%=photo.id%>?_method=DELETE" method="POST">
-<button type="submit">delete photo</button>
-</form>
-  </section>
-</main>
 
+
+
+	</main>
+
+	<section>
+		<button><a href="/users/<%= user.id %>/edit">Edit My Info</a></button>
+		<form method="POST" action="/users/<%= user.id %>?_method=DELETE">
+			<input type="submit" value="Delete My Info">
+		</form>
+	</section>
 
   </body>
 </html>

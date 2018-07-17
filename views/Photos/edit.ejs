@@ -7,20 +7,22 @@
 </head>
 <body>
   <header>
-    <h1>Edit <%=photo.name%></h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/photos">Photos Index</a></li>
-      </ul>
-    </nav>
-  </header><!-- /header -->
-  <main>
-    <h2>Photo attributes</h2>
-    <form action="/photos/<%=photo.id%>?_method=PUT" method="POST">
-      <input type="text" name="name" value="<%=photo.name%>"><br>
-      <button type="submit">Update Photo</button>
-    </form>
-  </main>
+  		<h1><%= user.username %></h1>
+  		<nav>
+  			<button><a href="/">Home</a></button>
+  			<button><a href="/users">Back to User Index</a></button>
+  		</nav>
+  	</header>
+
+  	<main>
+      
+  	</main>
+
+  	<section>
+  		<button><a href="/users/<%= user.id %>/edit">Edit My Info</a></button>
+  		<form method="POST" action="/users/<%= user.id %>?_method=DELETE">
+  			<input type="submit" value="Delete My Info">
+  		</form>
+  	</section>
 </body>
 </html>

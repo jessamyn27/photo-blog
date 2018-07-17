@@ -8,19 +8,18 @@
   </head>
   <body>
     <header>
-      <h1>Create a New Photo</h1>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/photos">Photos Index</a></li>
-        </ul>
-      </nav>
-    </header>
+  		<h1>Welcome to Photo Drop!</h1>
+  		<button><a href="/">Home</a></button>
+  	</header>
+  	<br>
 
-    <main>
-      <form action="/photos" method="POST">
-        <input type="text" name="name">
-        <button type="submit">Submit</button>
-      </main>
+  	<section>
+  		<form method="POST" action="/users">
+  			Username: <input type="text" name="username">
+  			Password: <input type="text" name="password">
+  			<input type="submit" value="Create User">
+  		</form>
+  	</section>
+
   </body>
 </html>

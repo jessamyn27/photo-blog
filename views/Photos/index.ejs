@@ -6,23 +6,20 @@
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Photos</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/photos/new">Create a new Photo</a></li>
-      </ul>
-    </nav>
-  </header><!-- /header -->
-  <main>
-    <h2>List of Photos</h2>
-    <ul>
-      <% for (let i = 0; i < photos.length; i++){%>
-           <li><a href="/photos/<%=photos[i].id%>"><%=photos[i].name %></a></li>
-      <%}%>
-    </ul>
 
-  </main>
+  <header>
+  		<h1>Meet the Talented Photographers</h1>
+  		<button><a href="/">Home</a></button>
+  		<button><a href="/users/new">Add Your Info!</a></button>
+  	</header>
+
+  	<main>
+  		<ul>
+  			<% for(let i = 0; i < users.length; i++) { %>
+  				<li><a href="/users/<%= users[i].id%>"><%= users[i].username %></a></li>
+  			<% } %>
+  		</ul>
+  	</main>
+
 </body>
 </html>

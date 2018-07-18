@@ -2,6 +2,7 @@
 const express = require('express');
 const router  = express.Router();
 const Photo  = require('../models/photos');
+const Users = require('../models/users');
 
 // home route for all photos =======================
 router.get('/', (req, res) => {

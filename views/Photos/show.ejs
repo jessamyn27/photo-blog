@@ -10,10 +10,10 @@
   <body>
 
     <header>
-		<h1><%= user.username %></h1>
+		<h1><%=photo.user%></h1>
 		<nav>
 			<button><a href="/">Home</a></button>
-			<button><a href="/users">Back to User Index</a></button>
+			<button><a href="/Photos">Back to Photo Index</a></button>
 		</nav>
 	</header>
 
@@ -25,8 +25,8 @@
 	</main>
 
 	<section>
-		<button><a href="/users/<%= user.id %>/edit">Edit My Info</a></button>
-		<form method="POST" action="/users/<%= user.id %>?_method=DELETE">
+		<button><a href="/photos/<%= photo.id %>/edit">Edit My Info</a></button>
+		<form method="POST" action="/photos/<%= photo.id %>?_method=DELETE">
 			<input type="submit" value="Delete My Info">
 		</form>
 	</section>

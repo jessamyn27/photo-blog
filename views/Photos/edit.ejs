@@ -15,14 +15,18 @@
   	</header>
 
   	<main>
-      
+
   	</main>
 
   	<section>
-  		<button><a href="/users/<%= user.id %>/edit">Edit My Info</a></button>
-  		<form method="POST" action="/users/<%= user.id %>?_method=DELETE">
-  			<input type="submit" value="Delete My Info">
-  		</form>
+  		<button><a href="/photos/<%= photo.id %>/edit">Edit My Info</a></button>
+
+      <form method="POST" action="/photos/<%= photo.id %>?_method=PUT">Name
+				<input type="text" name="user" value="<%= photo.user %>">Image URL
+				<input type="text" name="img" value="<%= photo.img %>">About Photo
+				<input type="text" name="about" value="<%= photo.about %>">
+				<input type="submit" value="Update Post">
+			</form>
   	</section>
 </body>
 </html>
